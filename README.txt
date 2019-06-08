@@ -1,26 +1,25 @@
 SIMULAZIONE SCHEDULING CPU IN JAVA
 
 FUNZIONAMENTO DEL PROGRAMMA:
-1- Scaricare e salvare il file .jar dal sito di E-Learning
-2- Da terminale inserire il seguente comando per avviare il programma:
+1- Da terminale inserire il seguente comando per avviare il programma:
 			java -jar <nomearchivio>.jar
-3- Inserire i diversi dati
+2- Inserire i diversi dati
 
-Una volta avviata l'esecuzione del programma verr‡ chiesto di inserire i diversi dati.
+Una volta avviata l'esecuzione del programma verr√† chiesto di inserire i diversi dati.
 Dati richiesti:
 	- Numero processi
-	- Per ogni processo verr‡ chiesto il tempo di burst e il tempo di arrivo, il PID verr‡ assegnato in automatico da parte del programma a partire da valore 1
-	- Numero istanze RR, verr‡ chiesto quanti diversi RoundRobin visualizzare (es. Voglio RR con quanto 1 e 3 -> Inserisco 2 e successivamente mi verranno chiesti i quanti)
-	- Quanti del RR, in base al valore inserito precedentemente (numero istanze RR) verr‡ chiesta per ogni istanza il suo quanto
-Una volta inseriti tutti i dati il programma eseguir‡ lo scheduling dei processi tramite i diversi algoritmi, in ordine: [FCFS, SJF, SRTF, RR, HRRN]
+	- Per ogni processo verr√† chiesto il tempo di burst e il tempo di arrivo, il PID verr√† assegnato in automatico da parte del programma a partire da valore 1
+	- Numero istanze RR, verr√† chiesto quanti diversi RoundRobin visualizzare (es. Voglio RR con quanto 1 e 3 -> Inserisco 2 e successivamente mi verranno chiesti i quanti)
+	- Quanti del RR, in base al valore inserito precedentemente (numero istanze RR) verr√† chiesta per ogni istanza il suo quanto
+Una volta inseriti tutti i dati il programma eseguir√† lo scheduling dei processi tramite i diversi algoritmi, in ordine: [FCFS, SJF, SRTF, RR, HRRN]
 
 SPECIFICHE DEL PROGRAMMA (v1)
-L'output di ogni scheduling avr‡ sempre lo stesso stile: 
+L'output di ogni scheduling avr√† sempre lo stesso stile: 
 
 <NomeAlgoritmo> : [<Ordine di esecuzione dei processi>] -> Eventuali esecuzioni per istanti successivi dello stesso sono riassunte con un unico valore
-<Disegno dello scheduling> -> Verr‡ visualizzata il disegno dello scheduling dove ogni processo ha la sua riga, negli istanti in cui Ë eseguito verr‡ scritto il suo PID
-				negli istanti in attesa verr‡ stampato "-", dopo il termine del processo non avremo pi˘ caratteri nella sua riga; mentre se l'istante di arrivo del
-				processo nella ReadyQueue Ë diverso dall'istante di risposta verr‡ segnalato tale istante tramite "x" (che andr‡ aggiunto ai "-" nel calcolo di TAttesa)
+<Disegno dello scheduling> -> Verr√† visualizzata il disegno dello scheduling dove ogni processo ha la sua riga, negli istanti in cui √® eseguito verr√† scritto il suo PID
+				negli istanti in attesa verr√† stampato "-", dopo il termine del processo non avremo pi√π caratteri nella sua riga; mentre se l'istante di arrivo del
+				processo nella ReadyQueue √® diverso dall'istante di risposta verr√† segnalato tale istante tramite "x" (che andr√† aggiunto ai "-" nel calcolo di TAttesa)
 <Tabella dei tempi> -> Per ogni processo verranno riportati i 3 tempi relativi allo scheduling appena eseguito
 
 Il programma contiene controlli per quanto riguarda l'inserimento dei dati:
@@ -31,10 +30,10 @@ Il programma contiene controlli per quanto riguarda l'inserimento dei dati:
 - Quanto >= 1
 
 NB. Il programma, nella versione attuale, non contiene controlli per quanto riguarda tempi morti.
-Se durante l'inserimento dei processi viene inserito un set di dati che contiene istanti in cui non Ë presente nessun processo nella ReadyQueue da poter eseguire, il programma inizier‡ la
-normale esecuzione e, molto probabilmente, si bloccher‡ lanciando una NullPointerException.
+Se durante l'inserimento dei processi viene inserito un set di dati che contiene istanti in cui non √® presente nessun processo nella ReadyQueue da poter eseguire, il programma inizier√† la
+normale esecuzione e, molto probabilmente, si bloccher√† lanciando una NullPointerException.
 
-Il criterio di scelta di accodamento dei processi nella ReadyQueue, durante la simulazione di RoundRobin, Ë:
+Il criterio di scelta di accodamento dei processi nella ReadyQueue, durante la simulazione di RoundRobin, √®:
 	Eventuali processi arrivati durante l'ultimo quanto, supereranno nella ReadyQueue l'ultimo processo eseguito
 
 
